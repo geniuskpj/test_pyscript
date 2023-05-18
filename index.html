@@ -51,21 +51,23 @@
                 capture="user">
         </div>
         <div id="output"></div>
-        <py-tutor>
-            <py-config>
-                packages=[]
-                plugins = [
-                "https://pyscript.net/latest/plugins/python/py_tutor.py"
-                ]
-                [[fetch]]
-                files = ["./main.py"]
-            </py-config>
-            <section class="pyscript">
-                <py-script src="./main.py" ouput="output"></py-script>
-            </section>
-            
+        <section class="pyscript">
+            <py-tutor  modules="./main.py">
+                <py-config>
+                    packages=[]
+                    plugins = [
+                    "https://pyscript.net/latest/plugins/python/py_tutor.py"
+                    ]
+                    [[fetch]]
+                    files = ["./main.py"]
+                </py-config>
 
-        </py-tutor>
+                    <py-script src="./main.py" ouput="output"></py-script>
+                
+                
+
+            </py-tutor>
+        </section>
         
     </body>
 </html>
