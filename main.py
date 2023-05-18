@@ -9,5 +9,5 @@ def capture(e):
     document.getElementById('output').appendChild(first_item)
     return js.getPixels(first_item)
 
-document.getElementById('cam').addEventListener('change',capture)
+js.document.getElementById("cam").addEventListener('change',capture)
 
