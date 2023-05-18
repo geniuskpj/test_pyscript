@@ -38,15 +38,24 @@
         // Open the browser devtools to see the output
         model.predict(tf.tensor2d([5], [1, 1])).print();
       });
+      import * as tf from '@tensorflow/tfjs';
+      function getPixels(input_img){
+        return tf.fromPiexels(input_img);
+      }
         </script>
     </head>
     <body>
         <h1>test</h1>
         <div class="container">
-            
-        </div>
-        <div id="plot"></div>
+            <label for="cam">Take a picture of pricetag</label>
 
-        <py-script src="./main.py" ouput="plot"></py-script>
+            <input type="file"
+                name="cam"
+                accept="image/*"
+                capture="user">
+        </div>
+        <div id="output"></div>
+
+        <py-script src="./main.py" ouput="output"></py-script>
     </body>
 </html>
