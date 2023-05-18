@@ -13,10 +13,6 @@
         <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"></script>
-        <py-env>
-
-            
-        </py-env>
         <script type="text/javascript">
                   // Notice there is no 'import' statement. 'tf' is available on the index-page
       // because of the script tag above.
@@ -55,7 +51,19 @@
                 capture="user">
         </div>
         <div id="output"></div>
+        <py-tutor>
+            <py-config>
+                packages=[]
+                plugins = [
+                "https://pyscript.net/latest/plugins/python/py_tutor.py"
+                ]
+            </py-config>
+            <section class="pyscript">
+                <py-script src="./main.py" ouput="output"></py-script>
+            </section>
+            
 
-        <py-script src="./main.py" ouput="output"></py-script>
+        </py-tutor>
+        
     </body>
 </html>
